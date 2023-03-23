@@ -1,0 +1,1864 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CLINIC_DATABASE.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CLINIC_DATABASEStoreContainer">
+    <EntitySet Name="APO_TBL" EntityType="CLINIC_DATABASE.Store.APO_TBL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CARD_TBL" EntityType="CLINIC_DATABASE.Store.CARD_TBL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CLINC_TBL" EntityType="CLINIC_DATABASE.Store.CLINC_TBL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="COMPANY_TBL" EntityType="CLINIC_DATABASE.Store.COMPANY_TBL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CUST_TBL" EntityType="CLINIC_DATABASE.Store.CUST_TBL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DIAGNOIS_TBL" EntityType="CLINIC_DATABASE.Store.DIAGNOIS_TBL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DIGLIST_TBL" EntityType="CLINIC_DATABASE.Store.DIGLIST_TBL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DOCTORS_TBL" EntityType="CLINIC_DATABASE.Store.DOCTORS_TBL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MEDCHEK_TBL" EntityType="CLINIC_DATABASE.Store.MEDCHEK_TBL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MEDCIN_TBL" EntityType="CLINIC_DATABASE.Store.MEDCIN_TBL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MEDLIST_TBL" EntityType="CLINIC_DATABASE.Store.MEDLIST_TBL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MEDREQ_TBL" EntityType="CLINIC_DATABASE.Store.MEDREQ_TBL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SERLIST_TBL" EntityType="CLINIC_DATABASE.Store.SERLIST_TBL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SERVICE_TBL" EntityType="CLINIC_DATABASE.Store.SERVICE_TBL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="USERS_TBL" EntityType="CLINIC_DATABASE.Store.USERS_TBL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VISIT_TBL" EntityType="CLINIC_DATABASE.Store.VISIT_TBL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ORDER_TBL" EntityType="CLINIC_DATABASE.Store.ORDER_TBL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DOS_TBL" EntityType="CLINIC_DATABASE.Store.DOS_TBL" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_APO_TBL_CLINC_TBL" Association="CLINIC_DATABASE.Store.FK_APO_TBL_CLINC_TBL">
+      <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+      <End Role="APO_TBL" EntitySet="APO_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_APO_TBL_CUST_TBL" Association="CLINIC_DATABASE.Store.FK_APO_TBL_CUST_TBL">
+      <End Role="CUST_TBL" EntitySet="CUST_TBL" />
+      <End Role="APO_TBL" EntitySet="APO_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CARD_TBL_CLINC_TBL" Association="CLINIC_DATABASE.Store.FK_CARD_TBL_CLINC_TBL">
+      <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+      <End Role="CARD_TBL" EntitySet="CARD_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CARD_TBL_COMPANY_TBL" Association="CLINIC_DATABASE.Store.FK_CARD_TBL_COMPANY_TBL">
+      <End Role="COMPANY_TBL" EntitySet="COMPANY_TBL" />
+      <End Role="CARD_TBL" EntitySet="CARD_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CUST_TBL_CARD_TBL" Association="CLINIC_DATABASE.Store.FK_CUST_TBL_CARD_TBL">
+      <End Role="CARD_TBL" EntitySet="CARD_TBL" />
+      <End Role="CUST_TBL" EntitySet="CUST_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPANY_TBL_CLINC_TBL" Association="CLINIC_DATABASE.Store.FK_COMPANY_TBL_CLINC_TBL">
+      <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+      <End Role="COMPANY_TBL" EntitySet="COMPANY_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CUST_TBL_CLINC_TBL" Association="CLINIC_DATABASE.Store.FK_CUST_TBL_CLINC_TBL">
+      <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+      <End Role="CUST_TBL" EntitySet="CUST_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DIAGNOIS_TBL_CLINC_TBL" Association="CLINIC_DATABASE.Store.FK_DIAGNOIS_TBL_CLINC_TBL">
+      <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+      <End Role="DIAGNOIS_TBL" EntitySet="DIAGNOIS_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DIGLIST_TBL_CLINC_TBL" Association="CLINIC_DATABASE.Store.FK_DIGLIST_TBL_CLINC_TBL">
+      <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+      <End Role="DIGLIST_TBL" EntitySet="DIGLIST_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DOCTORS_TBL_CLINC_TBL" Association="CLINIC_DATABASE.Store.FK_DOCTORS_TBL_CLINC_TBL">
+      <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+      <End Role="DOCTORS_TBL" EntitySet="DOCTORS_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MEDCHEK_TBL_CLINC_TBL" Association="CLINIC_DATABASE.Store.FK_MEDCHEK_TBL_CLINC_TBL">
+      <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+      <End Role="MEDCHEK_TBL" EntitySet="MEDCHEK_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MEDCIN_TBL_CLINC_TBL" Association="CLINIC_DATABASE.Store.FK_MEDCIN_TBL_CLINC_TBL">
+      <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+      <End Role="MEDCIN_TBL" EntitySet="MEDCIN_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MEDREQ_TBL_CLINC_TBL" Association="CLINIC_DATABASE.Store.FK_MEDREQ_TBL_CLINC_TBL">
+      <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+      <End Role="MEDREQ_TBL" EntitySet="MEDREQ_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SERLIST_TBL_CLINC_TBL" Association="CLINIC_DATABASE.Store.FK_SERLIST_TBL_CLINC_TBL">
+      <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+      <End Role="SERLIST_TBL" EntitySet="SERLIST_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SERVICE_TBL_CLINC_TBL" Association="CLINIC_DATABASE.Store.FK_SERVICE_TBL_CLINC_TBL">
+      <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+      <End Role="SERVICE_TBL" EntitySet="SERVICE_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USERS_TBL_CLINC_TBL" Association="CLINIC_DATABASE.Store.FK_USERS_TBL_CLINC_TBL">
+      <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+      <End Role="USERS_TBL" EntitySet="USERS_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VISIT_TBL_CLINC_TBL" Association="CLINIC_DATABASE.Store.FK_VISIT_TBL_CLINC_TBL">
+      <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+      <End Role="VISIT_TBL" EntitySet="VISIT_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MEDLIST_TBL_CUST_TBL" Association="CLINIC_DATABASE.Store.FK_MEDLIST_TBL_CUST_TBL">
+      <End Role="CUST_TBL" EntitySet="CUST_TBL" />
+      <End Role="MEDLIST_TBL" EntitySet="MEDLIST_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VISIT_TBL_CUST_TBL" Association="CLINIC_DATABASE.Store.FK_VISIT_TBL_CUST_TBL">
+      <End Role="CUST_TBL" EntitySet="CUST_TBL" />
+      <End Role="VISIT_TBL" EntitySet="VISIT_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DIGLIST_TBL_DIAGNOIS_TBL" Association="CLINIC_DATABASE.Store.FK_DIGLIST_TBL_DIAGNOIS_TBL">
+      <End Role="DIAGNOIS_TBL" EntitySet="DIAGNOIS_TBL" />
+      <End Role="DIGLIST_TBL" EntitySet="DIGLIST_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DIGLIST_TBL_VISIT_TBL" Association="CLINIC_DATABASE.Store.FK_DIGLIST_TBL_VISIT_TBL">
+      <End Role="VISIT_TBL" EntitySet="VISIT_TBL" />
+      <End Role="DIGLIST_TBL" EntitySet="DIGLIST_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VISIT_TBL_DOCTORS_TBL" Association="CLINIC_DATABASE.Store.FK_VISIT_TBL_DOCTORS_TBL">
+      <End Role="DOCTORS_TBL" EntitySet="DOCTORS_TBL" />
+      <End Role="VISIT_TBL" EntitySet="VISIT_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MEDREQ_TBL_MEDCHEK_TBL" Association="CLINIC_DATABASE.Store.FK_MEDREQ_TBL_MEDCHEK_TBL">
+      <End Role="MEDCHEK_TBL" EntitySet="MEDCHEK_TBL" />
+      <End Role="MEDREQ_TBL" EntitySet="MEDREQ_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MEDLIST_TBL_MEDCIN_TBL" Association="CLINIC_DATABASE.Store.FK_MEDLIST_TBL_MEDCIN_TBL">
+      <End Role="MEDCIN_TBL" EntitySet="MEDCIN_TBL" />
+      <End Role="MEDLIST_TBL" EntitySet="MEDLIST_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SERLIST_TBL_SERLIST_TBL" Association="CLINIC_DATABASE.Store.FK_SERLIST_TBL_SERLIST_TBL">
+      <End Role="SERVICE_TBL" EntitySet="SERVICE_TBL" />
+      <End Role="SERLIST_TBL" EntitySet="SERLIST_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_APO_BDOCTORS_TBL" Association="CLINIC_DATABASE.Store.FK_APO_BDOCTORS_TBL">
+      <End Role="DOCTORS_TBL" EntitySet="DOCTORS_TBL" />
+      <End Role="APO_TBL" EntitySet="APO_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDER_TBL_ToTable" Association="CLINIC_DATABASE.Store.FK_ORDER_TBL_ToTable">
+      <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+      <End Role="ORDER_TBL" EntitySet="ORDER_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDER_TBL_CUST_TBL" Association="CLINIC_DATABASE.Store.FK_ORDER_TBL_CUST_TBL">
+      <End Role="CUST_TBL" EntitySet="CUST_TBL" />
+      <End Role="ORDER_TBL" EntitySet="ORDER_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DOS_TBL_CLINC_TBL" Association="CLINIC_DATABASE.Store.FK_DOS_TBL_CLINC_TBL">
+      <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+      <End Role="DOS_TBL" EntitySet="DOS_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MEDLIST_TBL_DOS_TBL" Association="CLINIC_DATABASE.Store.FK_MEDLIST_TBL_DOS_TBL">
+      <End Role="DOS_TBL" EntitySet="DOS_TBL" />
+      <End Role="MEDLIST_TBL" EntitySet="MEDLIST_TBL" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="APO_TBL">
+    <Key>
+      <PropertyRef Name="APO_ID" />
+    </Key>
+    <Property Name="APO_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="APO_CODE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="APO_DATE" Type="datetime" Nullable="true" />
+    <Property Name="APO_TIME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="APO_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="APO_NOTE" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CLI_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="CUST_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="DOC_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="VIS_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="CARD_TBL">
+    <Key>
+      <PropertyRef Name="CARD_ID" />
+    </Key>
+    <Property Name="CARD_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="CARD_CODE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="CARD_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CARD_DATE" Type="datetime" Nullable="true" />
+    <Property Name="CARD_STATE" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CARD_PER" Type="int" Nullable="true" />
+    <Property Name="CARD_NOTE" Type="varchar(max)" Nullable="true" />
+    <Property Name="COM_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="CLI_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="CLINC_TBL">
+    <Key>
+      <PropertyRef Name="CLI_ID" />
+    </Key>
+    <Property Name="CLI_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="CLI_CODE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="CLI_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CLI_LOC" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CLI_NOTE" Type="varchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="COMPANY_TBL">
+    <Key>
+      <PropertyRef Name="COM_ID" />
+    </Key>
+    <Property Name="COM_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="COM_CODE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="COM_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="COM_ADDRESS" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="COM_MOBILE1" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="COM_STATE" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CLI_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="CUST_TBL">
+    <Key>
+      <PropertyRef Name="CUST_ID" />
+    </Key>
+    <Property Name="CUST_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="CUST_CODE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="CUST_F_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CUST_S_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CUST_T_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CUST_L_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CUST_AGE" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CUST_BD" Type="datetime" Nullable="true" />
+    <Property Name="CUST_MOBLIE1" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CUST_MOBILE2" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CUST_ADDRESS" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CUST_SAVE_STATE" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CARD_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="CLI_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="CUST_NOTE" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="DIAGNOIS_TBL">
+    <Key>
+      <PropertyRef Name="DIG_ID" />
+    </Key>
+    <Property Name="DIG_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="DIG_CODE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="DIG_NAME" Type="varchar" Nullable="true" MaxLength="200" />
+    <Property Name="DIG_TYPE" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="DIG_NOTE" Type="varchar(max)" Nullable="true" />
+    <Property Name="CLI_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="DIGLIST_TBL">
+    <Key>
+      <PropertyRef Name="DIGLIST_ID" />
+    </Key>
+    <Property Name="DIGLIST_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="DIGLIST_CODE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="DIGLIST_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="DIGLIST_DATE" Type="datetime" Nullable="true" />
+    <Property Name="DIGLIST_TIME" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="DIG_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="CUST_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="VIS_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="CLI_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="DOCTORS_TBL">
+    <Key>
+      <PropertyRef Name="DOC_ID" />
+    </Key>
+    <Property Name="DOC_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="DOC_CODE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="DOC_NAME" Type="varchar(max)" Nullable="true" />
+    <Property Name="DOC_MAJOR" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="DOC_EXP" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="DOC_BD" Type="datetime" Nullable="true" />
+    <Property Name="DOC_MOBILE" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="DOC_ADDRESS" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CLI_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="USER_ID" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="MEDCHEK_TBL">
+    <Key>
+      <PropertyRef Name="MEDCHECK_ID" />
+    </Key>
+    <Property Name="MEDCHECK_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="MEDCHEK_CODE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="MEDCHEK_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="MEDCHEK_TYPE" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="MEDCHEK_PRICE" Type="decimal" Nullable="true" Precision="18" Scale="2" />
+    <Property Name="MEDCHEK_NOTE" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CLI_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="MEDCIN_TBL">
+    <Key>
+      <PropertyRef Name="MED_ID" />
+    </Key>
+    <Property Name="MED_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="MED_CODE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="MED_NAME" Type="varchar(max)" Nullable="true" />
+    <Property Name="MED_S_NAME" Type="varchar(max)" Nullable="true" />
+    <Property Name="MED_SOURSE" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="MED_PRICE" Type="decimal" Nullable="true" Precision="18" Scale="2" />
+    <Property Name="CLI_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="MEDLIST_TBL">
+    <Key>
+      <PropertyRef Name="MEDLIST_ID" />
+    </Key>
+    <Property Name="MEDLIST_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="MEDLIST_CODE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="MEDLIST_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="MEDLIST_DATE" Type="datetime" Nullable="true" />
+    <Property Name="MEDLIST_TIME" Type="time" Nullable="true" Precision="7" />
+    <Property Name="MED_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="DOS_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="CUST_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="VIS_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="MEDREQ_TBL">
+    <Key>
+      <PropertyRef Name="MEDREQ_ID" />
+    </Key>
+    <Property Name="MEDREQ_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="MEDREQ_CODE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="MEDREQ_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="MEDREQ_DATE" Type="datetime" Nullable="true" />
+    <Property Name="MEDREQ_TIME" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="MEDREQ_RESULT" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="MEDREQ_NOTE" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="MEDCHECK_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="CUST_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="CLI_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="VIS_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="MEDREQ_STATE" Type="varchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SERLIST_TBL">
+    <Key>
+      <PropertyRef Name="SERLIST_ID" />
+    </Key>
+    <Property Name="SERLIST_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="SERLIST_CODE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="SERLIST_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="SERLIST_DATE" Type="datetime" Nullable="true" />
+    <Property Name="SERLIST_TIME" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="SER_PRICE_TOTAL" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="SERLIST_NOTE" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="SER_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="CLI_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="CUST_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="VIS_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="SERVICE_TBL">
+    <Key>
+      <PropertyRef Name="SER_ID" />
+    </Key>
+    <Property Name="SER_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="SER_CODE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="SER_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="SER_TYPE" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="SER_PRICE" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="SER_NOTE" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CLI_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="USERS_TBL">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="USER_CODE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="USER_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="USER_PASSWORD" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="USER_TYPE" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CLI_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="VISIT_TBL">
+    <Key>
+      <PropertyRef Name="VIS_ID" />
+    </Key>
+    <Property Name="VIS_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="VIS_CODE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="VIS_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="VIS_DATE" Type="datetime" Nullable="true" />
+    <Property Name="VIS_TIME" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="VIS_TYPE" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CUST_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="CLI_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="DOC_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="VIS_PRICE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="VIS_DIS_COUNT" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="VIS_TOTAL" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="VIS_NOTE" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="VIS_PAY_TYPE" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ORDER_TBL">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="ORDER_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="ORDER_CODE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="ORDER_DATE" Type="datetime" Nullable="true" />
+    <Property Name="ORDER_TIME" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ORDER_NOTE" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CUST_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="CLI_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="DOS_TBL">
+    <Key>
+      <PropertyRef Name="DOS_ID" />
+    </Key>
+    <Property Name="DOS_ID" Type="decimal" StoreGeneratedPattern="Identity" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="DOS_CODE" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="DOS_NAME" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="DOS_TYPE" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="CLI_ID" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+  </EntityType>
+  <Association Name="FK_APO_TBL_CLINC_TBL">
+    <End Role="CLINC_TBL" Type="CLINIC_DATABASE.Store.CLINC_TBL" Multiplicity="0..1" />
+    <End Role="APO_TBL" Type="CLINIC_DATABASE.Store.APO_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLINC_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Principal>
+      <Dependent Role="APO_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_APO_TBL_CUST_TBL">
+    <End Role="CUST_TBL" Type="CLINIC_DATABASE.Store.CUST_TBL" Multiplicity="0..1" />
+    <End Role="APO_TBL" Type="CLINIC_DATABASE.Store.APO_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUST_TBL">
+        <PropertyRef Name="CUST_ID" />
+      </Principal>
+      <Dependent Role="APO_TBL">
+        <PropertyRef Name="CUST_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CARD_TBL_CLINC_TBL">
+    <End Role="CLINC_TBL" Type="CLINIC_DATABASE.Store.CLINC_TBL" Multiplicity="0..1" />
+    <End Role="CARD_TBL" Type="CLINIC_DATABASE.Store.CARD_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLINC_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Principal>
+      <Dependent Role="CARD_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CARD_TBL_COMPANY_TBL">
+    <End Role="COMPANY_TBL" Type="CLINIC_DATABASE.Store.COMPANY_TBL" Multiplicity="0..1" />
+    <End Role="CARD_TBL" Type="CLINIC_DATABASE.Store.CARD_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPANY_TBL">
+        <PropertyRef Name="COM_ID" />
+      </Principal>
+      <Dependent Role="CARD_TBL">
+        <PropertyRef Name="COM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CUST_TBL_CARD_TBL">
+    <End Role="CARD_TBL" Type="CLINIC_DATABASE.Store.CARD_TBL" Multiplicity="0..1" />
+    <End Role="CUST_TBL" Type="CLINIC_DATABASE.Store.CUST_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CARD_TBL">
+        <PropertyRef Name="CARD_ID" />
+      </Principal>
+      <Dependent Role="CUST_TBL">
+        <PropertyRef Name="CARD_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPANY_TBL_CLINC_TBL">
+    <End Role="CLINC_TBL" Type="CLINIC_DATABASE.Store.CLINC_TBL" Multiplicity="0..1" />
+    <End Role="COMPANY_TBL" Type="CLINIC_DATABASE.Store.COMPANY_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLINC_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Principal>
+      <Dependent Role="COMPANY_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CUST_TBL_CLINC_TBL">
+    <End Role="CLINC_TBL" Type="CLINIC_DATABASE.Store.CLINC_TBL" Multiplicity="0..1" />
+    <End Role="CUST_TBL" Type="CLINIC_DATABASE.Store.CUST_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLINC_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Principal>
+      <Dependent Role="CUST_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DIAGNOIS_TBL_CLINC_TBL">
+    <End Role="CLINC_TBL" Type="CLINIC_DATABASE.Store.CLINC_TBL" Multiplicity="0..1" />
+    <End Role="DIAGNOIS_TBL" Type="CLINIC_DATABASE.Store.DIAGNOIS_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLINC_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Principal>
+      <Dependent Role="DIAGNOIS_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DIGLIST_TBL_CLINC_TBL">
+    <End Role="CLINC_TBL" Type="CLINIC_DATABASE.Store.CLINC_TBL" Multiplicity="0..1" />
+    <End Role="DIGLIST_TBL" Type="CLINIC_DATABASE.Store.DIGLIST_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLINC_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Principal>
+      <Dependent Role="DIGLIST_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DOCTORS_TBL_CLINC_TBL">
+    <End Role="CLINC_TBL" Type="CLINIC_DATABASE.Store.CLINC_TBL" Multiplicity="0..1" />
+    <End Role="DOCTORS_TBL" Type="CLINIC_DATABASE.Store.DOCTORS_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLINC_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Principal>
+      <Dependent Role="DOCTORS_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MEDCHEK_TBL_CLINC_TBL">
+    <End Role="CLINC_TBL" Type="CLINIC_DATABASE.Store.CLINC_TBL" Multiplicity="0..1" />
+    <End Role="MEDCHEK_TBL" Type="CLINIC_DATABASE.Store.MEDCHEK_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLINC_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Principal>
+      <Dependent Role="MEDCHEK_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MEDCIN_TBL_CLINC_TBL">
+    <End Role="CLINC_TBL" Type="CLINIC_DATABASE.Store.CLINC_TBL" Multiplicity="0..1" />
+    <End Role="MEDCIN_TBL" Type="CLINIC_DATABASE.Store.MEDCIN_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLINC_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Principal>
+      <Dependent Role="MEDCIN_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MEDREQ_TBL_CLINC_TBL">
+    <End Role="CLINC_TBL" Type="CLINIC_DATABASE.Store.CLINC_TBL" Multiplicity="0..1" />
+    <End Role="MEDREQ_TBL" Type="CLINIC_DATABASE.Store.MEDREQ_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLINC_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Principal>
+      <Dependent Role="MEDREQ_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SERLIST_TBL_CLINC_TBL">
+    <End Role="CLINC_TBL" Type="CLINIC_DATABASE.Store.CLINC_TBL" Multiplicity="0..1" />
+    <End Role="SERLIST_TBL" Type="CLINIC_DATABASE.Store.SERLIST_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLINC_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Principal>
+      <Dependent Role="SERLIST_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SERVICE_TBL_CLINC_TBL">
+    <End Role="CLINC_TBL" Type="CLINIC_DATABASE.Store.CLINC_TBL" Multiplicity="0..1" />
+    <End Role="SERVICE_TBL" Type="CLINIC_DATABASE.Store.SERVICE_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLINC_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Principal>
+      <Dependent Role="SERVICE_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USERS_TBL_CLINC_TBL">
+    <End Role="CLINC_TBL" Type="CLINIC_DATABASE.Store.CLINC_TBL" Multiplicity="0..1" />
+    <End Role="USERS_TBL" Type="CLINIC_DATABASE.Store.USERS_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLINC_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Principal>
+      <Dependent Role="USERS_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VISIT_TBL_CLINC_TBL">
+    <End Role="CLINC_TBL" Type="CLINIC_DATABASE.Store.CLINC_TBL" Multiplicity="0..1" />
+    <End Role="VISIT_TBL" Type="CLINIC_DATABASE.Store.VISIT_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLINC_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Principal>
+      <Dependent Role="VISIT_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MEDLIST_TBL_CUST_TBL">
+    <End Role="CUST_TBL" Type="CLINIC_DATABASE.Store.CUST_TBL" Multiplicity="0..1" />
+    <End Role="MEDLIST_TBL" Type="CLINIC_DATABASE.Store.MEDLIST_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUST_TBL">
+        <PropertyRef Name="CUST_ID" />
+      </Principal>
+      <Dependent Role="MEDLIST_TBL">
+        <PropertyRef Name="CUST_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VISIT_TBL_CUST_TBL">
+    <End Role="CUST_TBL" Type="CLINIC_DATABASE.Store.CUST_TBL" Multiplicity="0..1" />
+    <End Role="VISIT_TBL" Type="CLINIC_DATABASE.Store.VISIT_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUST_TBL">
+        <PropertyRef Name="CUST_ID" />
+      </Principal>
+      <Dependent Role="VISIT_TBL">
+        <PropertyRef Name="CUST_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DIGLIST_TBL_DIAGNOIS_TBL">
+    <End Role="DIAGNOIS_TBL" Type="CLINIC_DATABASE.Store.DIAGNOIS_TBL" Multiplicity="0..1" />
+    <End Role="DIGLIST_TBL" Type="CLINIC_DATABASE.Store.DIGLIST_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIAGNOIS_TBL">
+        <PropertyRef Name="DIG_ID" />
+      </Principal>
+      <Dependent Role="DIGLIST_TBL">
+        <PropertyRef Name="DIG_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DIGLIST_TBL_VISIT_TBL">
+    <End Role="VISIT_TBL" Type="CLINIC_DATABASE.Store.VISIT_TBL" Multiplicity="0..1" />
+    <End Role="DIGLIST_TBL" Type="CLINIC_DATABASE.Store.DIGLIST_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VISIT_TBL">
+        <PropertyRef Name="VIS_ID" />
+      </Principal>
+      <Dependent Role="DIGLIST_TBL">
+        <PropertyRef Name="VIS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VISIT_TBL_DOCTORS_TBL">
+    <End Role="DOCTORS_TBL" Type="CLINIC_DATABASE.Store.DOCTORS_TBL" Multiplicity="0..1" />
+    <End Role="VISIT_TBL" Type="CLINIC_DATABASE.Store.VISIT_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DOCTORS_TBL">
+        <PropertyRef Name="DOC_ID" />
+      </Principal>
+      <Dependent Role="VISIT_TBL">
+        <PropertyRef Name="DOC_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MEDREQ_TBL_MEDCHEK_TBL">
+    <End Role="MEDCHEK_TBL" Type="CLINIC_DATABASE.Store.MEDCHEK_TBL" Multiplicity="0..1" />
+    <End Role="MEDREQ_TBL" Type="CLINIC_DATABASE.Store.MEDREQ_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MEDCHEK_TBL">
+        <PropertyRef Name="MEDCHECK_ID" />
+      </Principal>
+      <Dependent Role="MEDREQ_TBL">
+        <PropertyRef Name="MEDCHECK_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MEDLIST_TBL_MEDCIN_TBL">
+    <End Role="MEDCIN_TBL" Type="CLINIC_DATABASE.Store.MEDCIN_TBL" Multiplicity="0..1" />
+    <End Role="MEDLIST_TBL" Type="CLINIC_DATABASE.Store.MEDLIST_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MEDCIN_TBL">
+        <PropertyRef Name="MED_ID" />
+      </Principal>
+      <Dependent Role="MEDLIST_TBL">
+        <PropertyRef Name="MED_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SERLIST_TBL_SERLIST_TBL">
+    <End Role="SERVICE_TBL" Type="CLINIC_DATABASE.Store.SERVICE_TBL" Multiplicity="0..1" />
+    <End Role="SERLIST_TBL" Type="CLINIC_DATABASE.Store.SERLIST_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SERVICE_TBL">
+        <PropertyRef Name="SER_ID" />
+      </Principal>
+      <Dependent Role="SERLIST_TBL">
+        <PropertyRef Name="SER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_APO_BDOCTORS_TBL">
+    <End Role="DOCTORS_TBL" Type="CLINIC_DATABASE.Store.DOCTORS_TBL" Multiplicity="0..1" />
+    <End Role="APO_TBL" Type="CLINIC_DATABASE.Store.APO_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DOCTORS_TBL">
+        <PropertyRef Name="DOC_ID" />
+      </Principal>
+      <Dependent Role="APO_TBL">
+        <PropertyRef Name="DOC_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDER_TBL_ToTable">
+    <End Role="CLINC_TBL" Type="CLINIC_DATABASE.Store.CLINC_TBL" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ORDER_TBL" Type="CLINIC_DATABASE.Store.ORDER_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLINC_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Principal>
+      <Dependent Role="ORDER_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDER_TBL_CUST_TBL">
+    <End Role="CUST_TBL" Type="CLINIC_DATABASE.Store.CUST_TBL" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ORDER_TBL" Type="CLINIC_DATABASE.Store.ORDER_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUST_TBL">
+        <PropertyRef Name="CUST_ID" />
+      </Principal>
+      <Dependent Role="ORDER_TBL">
+        <PropertyRef Name="CUST_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DOS_TBL_CLINC_TBL">
+    <End Role="CLINC_TBL" Type="CLINIC_DATABASE.Store.CLINC_TBL" Multiplicity="0..1" />
+    <End Role="DOS_TBL" Type="CLINIC_DATABASE.Store.DOS_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLINC_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Principal>
+      <Dependent Role="DOS_TBL">
+        <PropertyRef Name="CLI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MEDLIST_TBL_DOS_TBL">
+    <End Role="DOS_TBL" Type="CLINIC_DATABASE.Store.DOS_TBL" Multiplicity="0..1" />
+    <End Role="MEDLIST_TBL" Type="CLINIC_DATABASE.Store.MEDLIST_TBL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DOS_TBL">
+        <PropertyRef Name="DOS_ID" />
+      </Principal>
+      <Dependent Role="MEDLIST_TBL">
+        <PropertyRef Name="DOS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CLINIC_DATABASE" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="APO_TBL">
+          <Key>
+            <PropertyRef Name="APO_ID" />
+          </Key>
+          <Property Name="APO_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="APO_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="APO_DATE" Type="DateTime" Precision="0" />
+          <Property Name="APO_TIME" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="APO_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="APO_NOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLI_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CUST_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="CLINC_TBL" Relationship="Self.FK_APO_TBL_CLINC_TBL" FromRole="APO_TBL" ToRole="CLINC_TBL" />
+          <NavigationProperty Name="CUST_TBL" Relationship="Self.FK_APO_TBL_CUST_TBL" FromRole="APO_TBL" ToRole="CUST_TBL" />
+          <Property Name="DOC_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="DOCTORS_TBL" Relationship="CLINIC_DATABASE.FK_APO_BDOCTORS_TBL" FromRole="APO_TBL" ToRole="DOCTORS_TBL" />
+          <Property Name="VIS_ID" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="CARD_TBL">
+          <Key>
+            <PropertyRef Name="CARD_ID" />
+          </Key>
+          <Property Name="CARD_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CARD_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CARD_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CARD_DATE" Type="DateTime" Precision="0" />
+          <Property Name="CARD_STATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CARD_PER" Type="Int32" />
+          <Property Name="CARD_NOTE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="COM_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CLI_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="CLINC_TBL" Relationship="Self.FK_CARD_TBL_CLINC_TBL" FromRole="CARD_TBL" ToRole="CLINC_TBL" />
+          <NavigationProperty Name="COMPANY_TBL" Relationship="Self.FK_CARD_TBL_COMPANY_TBL" FromRole="CARD_TBL" ToRole="COMPANY_TBL" />
+          <NavigationProperty Name="CUST_TBL" Relationship="Self.FK_CUST_TBL_CARD_TBL" FromRole="CARD_TBL" ToRole="CUST_TBL" />
+        </EntityType>
+        <EntityType Name="CLINC_TBL">
+          <Key>
+            <PropertyRef Name="CLI_ID" />
+          </Key>
+          <Property Name="CLI_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CLI_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CLI_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLI_LOC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLI_NOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="APO_TBL" Relationship="Self.FK_APO_TBL_CLINC_TBL" FromRole="CLINC_TBL" ToRole="APO_TBL" />
+          <NavigationProperty Name="CARD_TBL" Relationship="Self.FK_CARD_TBL_CLINC_TBL" FromRole="CLINC_TBL" ToRole="CARD_TBL" />
+          <NavigationProperty Name="COMPANY_TBL" Relationship="Self.FK_COMPANY_TBL_CLINC_TBL" FromRole="CLINC_TBL" ToRole="COMPANY_TBL" />
+          <NavigationProperty Name="CUST_TBL" Relationship="Self.FK_CUST_TBL_CLINC_TBL" FromRole="CLINC_TBL" ToRole="CUST_TBL" />
+          <NavigationProperty Name="DIAGNOIS_TBL" Relationship="Self.FK_DIAGNOIS_TBL_CLINC_TBL" FromRole="CLINC_TBL" ToRole="DIAGNOIS_TBL" />
+          <NavigationProperty Name="DIGLIST_TBL" Relationship="Self.FK_DIGLIST_TBL_CLINC_TBL" FromRole="CLINC_TBL" ToRole="DIGLIST_TBL" />
+          <NavigationProperty Name="DOCTORS_TBL" Relationship="Self.FK_DOCTORS_TBL_CLINC_TBL" FromRole="CLINC_TBL" ToRole="DOCTORS_TBL" />
+          <NavigationProperty Name="MEDCHEK_TBL" Relationship="Self.FK_MEDCHEK_TBL_CLINC_TBL" FromRole="CLINC_TBL" ToRole="MEDCHEK_TBL" />
+          <NavigationProperty Name="MEDCIN_TBL" Relationship="Self.FK_MEDCIN_TBL_CLINC_TBL" FromRole="CLINC_TBL" ToRole="MEDCIN_TBL" />
+          <NavigationProperty Name="MEDREQ_TBL" Relationship="Self.FK_MEDREQ_TBL_CLINC_TBL" FromRole="CLINC_TBL" ToRole="MEDREQ_TBL" />
+          <NavigationProperty Name="SERLIST_TBL" Relationship="Self.FK_SERLIST_TBL_CLINC_TBL" FromRole="CLINC_TBL" ToRole="SERLIST_TBL" />
+          <NavigationProperty Name="SERVICE_TBL" Relationship="Self.FK_SERVICE_TBL_CLINC_TBL" FromRole="CLINC_TBL" ToRole="SERVICE_TBL" />
+          <NavigationProperty Name="USERS_TBL" Relationship="Self.FK_USERS_TBL_CLINC_TBL" FromRole="CLINC_TBL" ToRole="USERS_TBL" />
+          <NavigationProperty Name="VISIT_TBL" Relationship="Self.FK_VISIT_TBL_CLINC_TBL" FromRole="CLINC_TBL" ToRole="VISIT_TBL" />
+          <NavigationProperty Name="ORDER_TBL" Relationship="CLINIC_DATABASE.FK_ORDER_TBL_ToTable" FromRole="CLINC_TBL" ToRole="ORDER_TBL" />
+          <NavigationProperty Name="DOS_TBL" Relationship="CLINIC_DATABASE.FK_DOS_TBL_CLINC_TBL" FromRole="CLINC_TBL" ToRole="DOS_TBL" />
+        </EntityType>
+        <EntityType Name="COMPANY_TBL">
+          <Key>
+            <PropertyRef Name="COM_ID" />
+          </Key>
+          <Property Name="COM_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="COM_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="COM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="COM_ADDRESS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="COM_MOBILE1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="COM_STATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLI_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="CARD_TBL" Relationship="Self.FK_CARD_TBL_COMPANY_TBL" FromRole="COMPANY_TBL" ToRole="CARD_TBL" />
+          <NavigationProperty Name="CLINC_TBL" Relationship="Self.FK_COMPANY_TBL_CLINC_TBL" FromRole="COMPANY_TBL" ToRole="CLINC_TBL" />
+        </EntityType>
+        <EntityType Name="CUST_TBL">
+          <Key>
+            <PropertyRef Name="CUST_ID" />
+          </Key>
+          <Property Name="CUST_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CUST_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CUST_F_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CUST_S_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CUST_T_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CUST_L_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CUST_AGE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CUST_BD" Type="DateTime" Precision="0" />
+          <Property Name="CUST_MOBLIE1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CUST_MOBILE2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CUST_ADDRESS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CUST_SAVE_STATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CARD_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CLI_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="APO_TBL" Relationship="Self.FK_APO_TBL_CUST_TBL" FromRole="CUST_TBL" ToRole="APO_TBL" />
+          <NavigationProperty Name="CARD_TBL" Relationship="Self.FK_CUST_TBL_CARD_TBL" FromRole="CUST_TBL" ToRole="CARD_TBL" />
+          <NavigationProperty Name="CLINC_TBL" Relationship="Self.FK_CUST_TBL_CLINC_TBL" FromRole="CUST_TBL" ToRole="CLINC_TBL" />
+          <NavigationProperty Name="MEDLIST_TBL" Relationship="Self.FK_MEDLIST_TBL_CUST_TBL" FromRole="CUST_TBL" ToRole="MEDLIST_TBL" />
+          <NavigationProperty Name="VISIT_TBL" Relationship="Self.FK_VISIT_TBL_CUST_TBL" FromRole="CUST_TBL" ToRole="VISIT_TBL" />
+          <Property Name="CUST_NOTE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ORDER_TBL" Relationship="CLINIC_DATABASE.FK_ORDER_TBL_CUST_TBL" FromRole="CUST_TBL" ToRole="ORDER_TBL" />
+        </EntityType>
+        <EntityType Name="DIAGNOIS_TBL">
+          <Key>
+            <PropertyRef Name="DIG_ID" />
+          </Key>
+          <Property Name="DIG_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DIG_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="DIG_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="DIG_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DIG_NOTE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CLI_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="CLINC_TBL" Relationship="Self.FK_DIAGNOIS_TBL_CLINC_TBL" FromRole="DIAGNOIS_TBL" ToRole="CLINC_TBL" />
+          <NavigationProperty Name="DIGLIST_TBL" Relationship="Self.FK_DIGLIST_TBL_DIAGNOIS_TBL" FromRole="DIAGNOIS_TBL" ToRole="DIGLIST_TBL" />
+        </EntityType>
+        <EntityType Name="DIGLIST_TBL">
+          <Key>
+            <PropertyRef Name="DIGLIST_ID" />
+          </Key>
+          <Property Name="DIGLIST_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DIGLIST_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="DIGLIST_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DIGLIST_DATE" Type="DateTime" Precision="0" />
+          <Property Name="DIGLIST_TIME" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DIG_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CUST_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="VIS_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CLI_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="CLINC_TBL" Relationship="Self.FK_DIGLIST_TBL_CLINC_TBL" FromRole="DIGLIST_TBL" ToRole="CLINC_TBL" />
+          <NavigationProperty Name="DIAGNOIS_TBL" Relationship="Self.FK_DIGLIST_TBL_DIAGNOIS_TBL" FromRole="DIGLIST_TBL" ToRole="DIAGNOIS_TBL" />
+          <NavigationProperty Name="VISIT_TBL" Relationship="Self.FK_DIGLIST_TBL_VISIT_TBL" FromRole="DIGLIST_TBL" ToRole="VISIT_TBL" />
+        </EntityType>
+        <EntityType Name="DOCTORS_TBL">
+          <Key>
+            <PropertyRef Name="DOC_ID" />
+          </Key>
+          <Property Name="DOC_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DOC_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="DOC_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DOC_MAJOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DOC_EXP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DOC_BD" Type="DateTime" Precision="0" />
+          <Property Name="DOC_MOBILE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DOC_ADDRESS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLI_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="CLINC_TBL" Relationship="Self.FK_DOCTORS_TBL_CLINC_TBL" FromRole="DOCTORS_TBL" ToRole="CLINC_TBL" />
+          <NavigationProperty Name="VISIT_TBL" Relationship="Self.FK_VISIT_TBL_DOCTORS_TBL" FromRole="DOCTORS_TBL" ToRole="VISIT_TBL" />
+          <Property Name="USER_ID" Type="Int32" />
+          <NavigationProperty Name="APO_TBL" Relationship="CLINIC_DATABASE.FK_APO_BDOCTORS_TBL" FromRole="DOCTORS_TBL" ToRole="APO_TBL" />
+        </EntityType>
+        <EntityType Name="MEDCHEK_TBL">
+          <Key>
+            <PropertyRef Name="MEDCHECK_ID" />
+          </Key>
+          <Property Name="MEDCHECK_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MEDCHEK_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MEDCHEK_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MEDCHEK_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MEDCHEK_PRICE" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="MEDCHEK_NOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLI_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="CLINC_TBL" Relationship="Self.FK_MEDCHEK_TBL_CLINC_TBL" FromRole="MEDCHEK_TBL" ToRole="CLINC_TBL" />
+          <NavigationProperty Name="MEDREQ_TBL" Relationship="Self.FK_MEDREQ_TBL_MEDCHEK_TBL" FromRole="MEDCHEK_TBL" ToRole="MEDREQ_TBL" />
+        </EntityType>
+        <EntityType Name="MEDCIN_TBL">
+          <Key>
+            <PropertyRef Name="MED_ID" />
+          </Key>
+          <Property Name="MED_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MED_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MED_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MED_S_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MED_SOURSE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MED_PRICE" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CLI_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="CLINC_TBL" Relationship="Self.FK_MEDCIN_TBL_CLINC_TBL" FromRole="MEDCIN_TBL" ToRole="CLINC_TBL" />
+          <NavigationProperty Name="MEDLIST_TBL" Relationship="Self.FK_MEDLIST_TBL_MEDCIN_TBL" FromRole="MEDCIN_TBL" ToRole="MEDLIST_TBL" />
+        </EntityType>
+        <EntityType Name="MEDLIST_TBL">
+          <Key>
+            <PropertyRef Name="MEDLIST_ID" />
+          </Key>
+          <Property Name="MEDLIST_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MEDLIST_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MEDLIST_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MEDLIST_DATE" Type="DateTime" Precision="0" />
+          <Property Name="MEDLIST_TIME" Type="Time" Precision="7" />
+          <Property Name="MED_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="DOS_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CUST_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="VIS_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="CUST_TBL" Relationship="Self.FK_MEDLIST_TBL_CUST_TBL" FromRole="MEDLIST_TBL" ToRole="CUST_TBL" />
+          <NavigationProperty Name="MEDCIN_TBL" Relationship="Self.FK_MEDLIST_TBL_MEDCIN_TBL" FromRole="MEDLIST_TBL" ToRole="MEDCIN_TBL" />
+          <NavigationProperty Name="DOS_TBL" Relationship="CLINIC_DATABASE.FK_MEDLIST_TBL_DOS_TBL" FromRole="MEDLIST_TBL" ToRole="DOS_TBL" />
+        </EntityType>
+        <EntityType Name="MEDREQ_TBL">
+          <Key>
+            <PropertyRef Name="MEDREQ_ID" />
+          </Key>
+          <Property Name="MEDREQ_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MEDREQ_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MEDREQ_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MEDREQ_DATE" Type="DateTime" Precision="0" />
+          <Property Name="MEDREQ_TIME" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MEDREQ_RESULT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MEDREQ_NOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MEDCHECK_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CUST_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CLI_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="VIS_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="CLINC_TBL" Relationship="Self.FK_MEDREQ_TBL_CLINC_TBL" FromRole="MEDREQ_TBL" ToRole="CLINC_TBL" />
+          <NavigationProperty Name="MEDCHEK_TBL" Relationship="Self.FK_MEDREQ_TBL_MEDCHEK_TBL" FromRole="MEDREQ_TBL" ToRole="MEDCHEK_TBL" />
+          <Property Name="MEDREQ_STATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SERLIST_TBL">
+          <Key>
+            <PropertyRef Name="SERLIST_ID" />
+          </Key>
+          <Property Name="SERLIST_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SERLIST_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SERLIST_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SERLIST_DATE" Type="DateTime" Precision="0" />
+          <Property Name="SERLIST_TIME" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SER_PRICE_TOTAL" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SERLIST_NOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SER_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CLI_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CUST_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="VIS_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="CLINC_TBL" Relationship="Self.FK_SERLIST_TBL_CLINC_TBL" FromRole="SERLIST_TBL" ToRole="CLINC_TBL" />
+          <NavigationProperty Name="SERVICE_TBL" Relationship="Self.FK_SERLIST_TBL_SERLIST_TBL" FromRole="SERLIST_TBL" ToRole="SERVICE_TBL" />
+        </EntityType>
+        <EntityType Name="SERVICE_TBL">
+          <Key>
+            <PropertyRef Name="SER_ID" />
+          </Key>
+          <Property Name="SER_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SER_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SER_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SER_PRICE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SER_NOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLI_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="CLINC_TBL" Relationship="Self.FK_SERVICE_TBL_CLINC_TBL" FromRole="SERVICE_TBL" ToRole="CLINC_TBL" />
+          <NavigationProperty Name="SERLIST_TBL" Relationship="Self.FK_SERLIST_TBL_SERLIST_TBL" FromRole="SERVICE_TBL" ToRole="SERLIST_TBL" />
+        </EntityType>
+        <EntityType Name="USERS_TBL">
+          <Key>
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="USER_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USER_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="USER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USER_PASSWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USER_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLI_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="CLINC_TBL" Relationship="Self.FK_USERS_TBL_CLINC_TBL" FromRole="USERS_TBL" ToRole="CLINC_TBL" />
+        </EntityType>
+        <EntityType Name="VISIT_TBL">
+          <Key>
+            <PropertyRef Name="VIS_ID" />
+          </Key>
+          <Property Name="VIS_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VIS_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="VIS_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VIS_DATE" Type="DateTime" Precision="0" />
+          <Property Name="VIS_TIME" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="VIS_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CUST_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CLI_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="DOC_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="CLINC_TBL" Relationship="Self.FK_VISIT_TBL_CLINC_TBL" FromRole="VISIT_TBL" ToRole="CLINC_TBL" />
+          <NavigationProperty Name="CUST_TBL" Relationship="Self.FK_VISIT_TBL_CUST_TBL" FromRole="VISIT_TBL" ToRole="CUST_TBL" />
+          <NavigationProperty Name="DIGLIST_TBL" Relationship="Self.FK_DIGLIST_TBL_VISIT_TBL" FromRole="VISIT_TBL" ToRole="DIGLIST_TBL" />
+          <NavigationProperty Name="DOCTORS_TBL" Relationship="Self.FK_VISIT_TBL_DOCTORS_TBL" FromRole="VISIT_TBL" ToRole="DOCTORS_TBL" />
+          <Property Name="VIS_PRICE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="VIS_DIS_COUNT" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="VIS_TOTAL" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="VIS_NOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VIS_PAY_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_APO_TBL_CLINC_TBL">
+          <End Role="CLINC_TBL" Type="Self.CLINC_TBL" Multiplicity="0..1" />
+          <End Role="APO_TBL" Type="Self.APO_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLINC_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Principal>
+            <Dependent Role="APO_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_APO_TBL_CUST_TBL">
+          <End Role="CUST_TBL" Type="Self.CUST_TBL" Multiplicity="0..1" />
+          <End Role="APO_TBL" Type="Self.APO_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUST_TBL">
+              <PropertyRef Name="CUST_ID" />
+            </Principal>
+            <Dependent Role="APO_TBL">
+              <PropertyRef Name="CUST_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARD_TBL_CLINC_TBL">
+          <End Role="CLINC_TBL" Type="Self.CLINC_TBL" Multiplicity="0..1" />
+          <End Role="CARD_TBL" Type="Self.CARD_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLINC_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Principal>
+            <Dependent Role="CARD_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARD_TBL_COMPANY_TBL">
+          <End Role="COMPANY_TBL" Type="Self.COMPANY_TBL" Multiplicity="0..1" />
+          <End Role="CARD_TBL" Type="Self.CARD_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COMPANY_TBL">
+              <PropertyRef Name="COM_ID" />
+            </Principal>
+            <Dependent Role="CARD_TBL">
+              <PropertyRef Name="COM_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CUST_TBL_CARD_TBL">
+          <End Role="CARD_TBL" Type="Self.CARD_TBL" Multiplicity="0..1" />
+          <End Role="CUST_TBL" Type="Self.CUST_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARD_TBL">
+              <PropertyRef Name="CARD_ID" />
+            </Principal>
+            <Dependent Role="CUST_TBL">
+              <PropertyRef Name="CARD_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COMPANY_TBL_CLINC_TBL">
+          <End Role="CLINC_TBL" Type="Self.CLINC_TBL" Multiplicity="0..1" />
+          <End Role="COMPANY_TBL" Type="Self.COMPANY_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLINC_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Principal>
+            <Dependent Role="COMPANY_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CUST_TBL_CLINC_TBL">
+          <End Role="CLINC_TBL" Type="Self.CLINC_TBL" Multiplicity="0..1" />
+          <End Role="CUST_TBL" Type="Self.CUST_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLINC_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Principal>
+            <Dependent Role="CUST_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DIAGNOIS_TBL_CLINC_TBL">
+          <End Role="CLINC_TBL" Type="Self.CLINC_TBL" Multiplicity="0..1" />
+          <End Role="DIAGNOIS_TBL" Type="Self.DIAGNOIS_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLINC_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Principal>
+            <Dependent Role="DIAGNOIS_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DIGLIST_TBL_CLINC_TBL">
+          <End Role="CLINC_TBL" Type="Self.CLINC_TBL" Multiplicity="0..1" />
+          <End Role="DIGLIST_TBL" Type="Self.DIGLIST_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLINC_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Principal>
+            <Dependent Role="DIGLIST_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOCTORS_TBL_CLINC_TBL">
+          <End Role="CLINC_TBL" Type="Self.CLINC_TBL" Multiplicity="0..1" />
+          <End Role="DOCTORS_TBL" Type="Self.DOCTORS_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLINC_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Principal>
+            <Dependent Role="DOCTORS_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MEDCHEK_TBL_CLINC_TBL">
+          <End Role="CLINC_TBL" Type="Self.CLINC_TBL" Multiplicity="0..1" />
+          <End Role="MEDCHEK_TBL" Type="Self.MEDCHEK_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLINC_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Principal>
+            <Dependent Role="MEDCHEK_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MEDCIN_TBL_CLINC_TBL">
+          <End Role="CLINC_TBL" Type="Self.CLINC_TBL" Multiplicity="0..1" />
+          <End Role="MEDCIN_TBL" Type="Self.MEDCIN_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLINC_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Principal>
+            <Dependent Role="MEDCIN_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MEDREQ_TBL_CLINC_TBL">
+          <End Role="CLINC_TBL" Type="Self.CLINC_TBL" Multiplicity="0..1" />
+          <End Role="MEDREQ_TBL" Type="Self.MEDREQ_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLINC_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Principal>
+            <Dependent Role="MEDREQ_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SERLIST_TBL_CLINC_TBL">
+          <End Role="CLINC_TBL" Type="Self.CLINC_TBL" Multiplicity="0..1" />
+          <End Role="SERLIST_TBL" Type="Self.SERLIST_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLINC_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Principal>
+            <Dependent Role="SERLIST_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SERVICE_TBL_CLINC_TBL">
+          <End Role="CLINC_TBL" Type="Self.CLINC_TBL" Multiplicity="0..1" />
+          <End Role="SERVICE_TBL" Type="Self.SERVICE_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLINC_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Principal>
+            <Dependent Role="SERVICE_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_USERS_TBL_CLINC_TBL">
+          <End Role="CLINC_TBL" Type="Self.CLINC_TBL" Multiplicity="0..1" />
+          <End Role="USERS_TBL" Type="Self.USERS_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLINC_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Principal>
+            <Dependent Role="USERS_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VISIT_TBL_CLINC_TBL">
+          <End Role="CLINC_TBL" Type="Self.CLINC_TBL" Multiplicity="0..1" />
+          <End Role="VISIT_TBL" Type="Self.VISIT_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLINC_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Principal>
+            <Dependent Role="VISIT_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MEDLIST_TBL_CUST_TBL">
+          <End Role="CUST_TBL" Type="Self.CUST_TBL" Multiplicity="0..1" />
+          <End Role="MEDLIST_TBL" Type="Self.MEDLIST_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUST_TBL">
+              <PropertyRef Name="CUST_ID" />
+            </Principal>
+            <Dependent Role="MEDLIST_TBL">
+              <PropertyRef Name="CUST_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VISIT_TBL_CUST_TBL">
+          <End Role="CUST_TBL" Type="Self.CUST_TBL" Multiplicity="0..1" />
+          <End Role="VISIT_TBL" Type="Self.VISIT_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUST_TBL">
+              <PropertyRef Name="CUST_ID" />
+            </Principal>
+            <Dependent Role="VISIT_TBL">
+              <PropertyRef Name="CUST_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DIGLIST_TBL_DIAGNOIS_TBL">
+          <End Role="DIAGNOIS_TBL" Type="Self.DIAGNOIS_TBL" Multiplicity="0..1" />
+          <End Role="DIGLIST_TBL" Type="Self.DIGLIST_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DIAGNOIS_TBL">
+              <PropertyRef Name="DIG_ID" />
+            </Principal>
+            <Dependent Role="DIGLIST_TBL">
+              <PropertyRef Name="DIG_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DIGLIST_TBL_VISIT_TBL">
+          <End Role="VISIT_TBL" Type="Self.VISIT_TBL" Multiplicity="0..1" />
+          <End Role="DIGLIST_TBL" Type="Self.DIGLIST_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VISIT_TBL">
+              <PropertyRef Name="VIS_ID" />
+            </Principal>
+            <Dependent Role="DIGLIST_TBL">
+              <PropertyRef Name="VIS_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VISIT_TBL_DOCTORS_TBL">
+          <End Role="DOCTORS_TBL" Type="Self.DOCTORS_TBL" Multiplicity="0..1" />
+          <End Role="VISIT_TBL" Type="Self.VISIT_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOCTORS_TBL">
+              <PropertyRef Name="DOC_ID" />
+            </Principal>
+            <Dependent Role="VISIT_TBL">
+              <PropertyRef Name="DOC_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MEDREQ_TBL_MEDCHEK_TBL">
+          <End Role="MEDCHEK_TBL" Type="Self.MEDCHEK_TBL" Multiplicity="0..1" />
+          <End Role="MEDREQ_TBL" Type="Self.MEDREQ_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MEDCHEK_TBL">
+              <PropertyRef Name="MEDCHECK_ID" />
+            </Principal>
+            <Dependent Role="MEDREQ_TBL">
+              <PropertyRef Name="MEDCHECK_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MEDLIST_TBL_MEDCIN_TBL">
+          <End Role="MEDCIN_TBL" Type="Self.MEDCIN_TBL" Multiplicity="0..1" />
+          <End Role="MEDLIST_TBL" Type="Self.MEDLIST_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MEDCIN_TBL">
+              <PropertyRef Name="MED_ID" />
+            </Principal>
+            <Dependent Role="MEDLIST_TBL">
+              <PropertyRef Name="MED_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SERLIST_TBL_SERLIST_TBL">
+          <End Role="SERVICE_TBL" Type="Self.SERVICE_TBL" Multiplicity="0..1" />
+          <End Role="SERLIST_TBL" Type="Self.SERLIST_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERVICE_TBL">
+              <PropertyRef Name="SER_ID" />
+            </Principal>
+            <Dependent Role="SERLIST_TBL">
+              <PropertyRef Name="SER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CLINIC_DATABASE_2020Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="APO_TBL" EntityType="Self.APO_TBL" />
+          <EntitySet Name="CARD_TBL" EntityType="Self.CARD_TBL" />
+          <EntitySet Name="CLINC_TBL" EntityType="Self.CLINC_TBL" />
+          <EntitySet Name="COMPANY_TBL" EntityType="Self.COMPANY_TBL" />
+          <EntitySet Name="CUST_TBL" EntityType="Self.CUST_TBL" />
+          <EntitySet Name="DIAGNOIS_TBL" EntityType="Self.DIAGNOIS_TBL" />
+          <EntitySet Name="DIGLIST_TBL" EntityType="Self.DIGLIST_TBL" />
+          <EntitySet Name="DOCTORS_TBL" EntityType="Self.DOCTORS_TBL" />
+          <EntitySet Name="MEDCHEK_TBL" EntityType="Self.MEDCHEK_TBL" />
+          <EntitySet Name="MEDCIN_TBL" EntityType="Self.MEDCIN_TBL" />
+          <EntitySet Name="MEDLIST_TBL" EntityType="Self.MEDLIST_TBL" />
+          <EntitySet Name="MEDREQ_TBL" EntityType="Self.MEDREQ_TBL" />
+          <EntitySet Name="SERLIST_TBL" EntityType="Self.SERLIST_TBL" />
+          <EntitySet Name="SERVICE_TBL" EntityType="Self.SERVICE_TBL" />
+          <EntitySet Name="USERS_TBL" EntityType="Self.USERS_TBL" />
+          <EntitySet Name="VISIT_TBL" EntityType="Self.VISIT_TBL" />
+          <AssociationSet Name="FK_APO_TBL_CLINC_TBL" Association="Self.FK_APO_TBL_CLINC_TBL">
+            <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+            <End Role="APO_TBL" EntitySet="APO_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_APO_TBL_CUST_TBL" Association="Self.FK_APO_TBL_CUST_TBL">
+            <End Role="CUST_TBL" EntitySet="CUST_TBL" />
+            <End Role="APO_TBL" EntitySet="APO_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARD_TBL_CLINC_TBL" Association="Self.FK_CARD_TBL_CLINC_TBL">
+            <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+            <End Role="CARD_TBL" EntitySet="CARD_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARD_TBL_COMPANY_TBL" Association="Self.FK_CARD_TBL_COMPANY_TBL">
+            <End Role="COMPANY_TBL" EntitySet="COMPANY_TBL" />
+            <End Role="CARD_TBL" EntitySet="CARD_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CUST_TBL_CARD_TBL" Association="Self.FK_CUST_TBL_CARD_TBL">
+            <End Role="CARD_TBL" EntitySet="CARD_TBL" />
+            <End Role="CUST_TBL" EntitySet="CUST_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COMPANY_TBL_CLINC_TBL" Association="Self.FK_COMPANY_TBL_CLINC_TBL">
+            <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+            <End Role="COMPANY_TBL" EntitySet="COMPANY_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CUST_TBL_CLINC_TBL" Association="Self.FK_CUST_TBL_CLINC_TBL">
+            <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+            <End Role="CUST_TBL" EntitySet="CUST_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DIAGNOIS_TBL_CLINC_TBL" Association="Self.FK_DIAGNOIS_TBL_CLINC_TBL">
+            <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+            <End Role="DIAGNOIS_TBL" EntitySet="DIAGNOIS_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DIGLIST_TBL_CLINC_TBL" Association="Self.FK_DIGLIST_TBL_CLINC_TBL">
+            <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+            <End Role="DIGLIST_TBL" EntitySet="DIGLIST_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOCTORS_TBL_CLINC_TBL" Association="Self.FK_DOCTORS_TBL_CLINC_TBL">
+            <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+            <End Role="DOCTORS_TBL" EntitySet="DOCTORS_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MEDCHEK_TBL_CLINC_TBL" Association="Self.FK_MEDCHEK_TBL_CLINC_TBL">
+            <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+            <End Role="MEDCHEK_TBL" EntitySet="MEDCHEK_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MEDCIN_TBL_CLINC_TBL" Association="Self.FK_MEDCIN_TBL_CLINC_TBL">
+            <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+            <End Role="MEDCIN_TBL" EntitySet="MEDCIN_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MEDREQ_TBL_CLINC_TBL" Association="Self.FK_MEDREQ_TBL_CLINC_TBL">
+            <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+            <End Role="MEDREQ_TBL" EntitySet="MEDREQ_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SERLIST_TBL_CLINC_TBL" Association="Self.FK_SERLIST_TBL_CLINC_TBL">
+            <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+            <End Role="SERLIST_TBL" EntitySet="SERLIST_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SERVICE_TBL_CLINC_TBL" Association="Self.FK_SERVICE_TBL_CLINC_TBL">
+            <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+            <End Role="SERVICE_TBL" EntitySet="SERVICE_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_USERS_TBL_CLINC_TBL" Association="Self.FK_USERS_TBL_CLINC_TBL">
+            <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+            <End Role="USERS_TBL" EntitySet="USERS_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VISIT_TBL_CLINC_TBL" Association="Self.FK_VISIT_TBL_CLINC_TBL">
+            <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+            <End Role="VISIT_TBL" EntitySet="VISIT_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MEDLIST_TBL_CUST_TBL" Association="Self.FK_MEDLIST_TBL_CUST_TBL">
+            <End Role="CUST_TBL" EntitySet="CUST_TBL" />
+            <End Role="MEDLIST_TBL" EntitySet="MEDLIST_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VISIT_TBL_CUST_TBL" Association="Self.FK_VISIT_TBL_CUST_TBL">
+            <End Role="CUST_TBL" EntitySet="CUST_TBL" />
+            <End Role="VISIT_TBL" EntitySet="VISIT_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DIGLIST_TBL_DIAGNOIS_TBL" Association="Self.FK_DIGLIST_TBL_DIAGNOIS_TBL">
+            <End Role="DIAGNOIS_TBL" EntitySet="DIAGNOIS_TBL" />
+            <End Role="DIGLIST_TBL" EntitySet="DIGLIST_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DIGLIST_TBL_VISIT_TBL" Association="Self.FK_DIGLIST_TBL_VISIT_TBL">
+            <End Role="VISIT_TBL" EntitySet="VISIT_TBL" />
+            <End Role="DIGLIST_TBL" EntitySet="DIGLIST_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VISIT_TBL_DOCTORS_TBL" Association="Self.FK_VISIT_TBL_DOCTORS_TBL">
+            <End Role="DOCTORS_TBL" EntitySet="DOCTORS_TBL" />
+            <End Role="VISIT_TBL" EntitySet="VISIT_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MEDREQ_TBL_MEDCHEK_TBL" Association="Self.FK_MEDREQ_TBL_MEDCHEK_TBL">
+            <End Role="MEDCHEK_TBL" EntitySet="MEDCHEK_TBL" />
+            <End Role="MEDREQ_TBL" EntitySet="MEDREQ_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MEDLIST_TBL_MEDCIN_TBL" Association="Self.FK_MEDLIST_TBL_MEDCIN_TBL">
+            <End Role="MEDCIN_TBL" EntitySet="MEDCIN_TBL" />
+            <End Role="MEDLIST_TBL" EntitySet="MEDLIST_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SERLIST_TBL_SERLIST_TBL" Association="Self.FK_SERLIST_TBL_SERLIST_TBL">
+            <End Role="SERVICE_TBL" EntitySet="SERVICE_TBL" />
+            <End Role="SERLIST_TBL" EntitySet="SERLIST_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_APO_BDOCTORS_TBL" Association="CLINIC_DATABASE.FK_APO_BDOCTORS_TBL">
+            <End Role="DOCTORS_TBL" EntitySet="DOCTORS_TBL" />
+            <End Role="APO_TBL" EntitySet="APO_TBL" />
+          </AssociationSet>
+          <EntitySet Name="ORDER_TBL" EntityType="CLINIC_DATABASE.ORDER_TBL" />
+          <AssociationSet Name="FK_ORDER_TBL_ToTable" Association="CLINIC_DATABASE.FK_ORDER_TBL_ToTable">
+            <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+            <End Role="ORDER_TBL" EntitySet="ORDER_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ORDER_TBL_CUST_TBL" Association="CLINIC_DATABASE.FK_ORDER_TBL_CUST_TBL">
+            <End Role="CUST_TBL" EntitySet="CUST_TBL" />
+            <End Role="ORDER_TBL" EntitySet="ORDER_TBL" />
+          </AssociationSet>
+          <EntitySet Name="DOS_TBL" EntityType="CLINIC_DATABASE.DOS_TBL" />
+          <AssociationSet Name="FK_DOS_TBL_CLINC_TBL" Association="CLINIC_DATABASE.FK_DOS_TBL_CLINC_TBL">
+            <End Role="CLINC_TBL" EntitySet="CLINC_TBL" />
+            <End Role="DOS_TBL" EntitySet="DOS_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MEDLIST_TBL_DOS_TBL" Association="CLINIC_DATABASE.FK_MEDLIST_TBL_DOS_TBL">
+            <End Role="DOS_TBL" EntitySet="DOS_TBL" />
+            <End Role="MEDLIST_TBL" EntitySet="MEDLIST_TBL" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="FK_APO_BDOCTORS_TBL">
+          <End Type="CLINIC_DATABASE.DOCTORS_TBL" Role="DOCTORS_TBL" Multiplicity="0..1" />
+          <End Type="CLINIC_DATABASE.APO_TBL" Role="APO_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOCTORS_TBL">
+              <PropertyRef Name="DOC_ID" />
+            </Principal>
+            <Dependent Role="APO_TBL">
+              <PropertyRef Name="DOC_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ORDER_TBL">
+          <Key>
+            <PropertyRef Name="ORDER_ID" />
+          </Key>
+          <Property Name="ORDER_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ORDER_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ORDER_DATE" Type="DateTime" Precision="0" />
+          <Property Name="ORDER_TIME" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ORDER_NOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CUST_ID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CLI_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="CLINC_TBL" Relationship="CLINIC_DATABASE.FK_ORDER_TBL_ToTable" FromRole="ORDER_TBL" ToRole="CLINC_TBL" />
+          <NavigationProperty Name="CUST_TBL" Relationship="CLINIC_DATABASE.FK_ORDER_TBL_CUST_TBL" FromRole="ORDER_TBL" ToRole="CUST_TBL" />
+        </EntityType>
+        <Association Name="FK_ORDER_TBL_ToTable">
+          <End Type="CLINIC_DATABASE.CLINC_TBL" Role="CLINC_TBL" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="CLINIC_DATABASE.ORDER_TBL" Role="ORDER_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLINC_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Principal>
+            <Dependent Role="ORDER_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ORDER_TBL_CUST_TBL">
+          <End Type="CLINIC_DATABASE.CUST_TBL" Role="CUST_TBL" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="CLINIC_DATABASE.ORDER_TBL" Role="ORDER_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUST_TBL">
+              <PropertyRef Name="CUST_ID" />
+            </Principal>
+            <Dependent Role="ORDER_TBL">
+              <PropertyRef Name="CUST_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="DOS_TBL">
+          <Key>
+            <PropertyRef Name="DOS_ID" />
+          </Key>
+          <Property Name="DOS_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DOS_CODE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="DOS_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DOS_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLI_ID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="CLINC_TBL" Relationship="CLINIC_DATABASE.FK_DOS_TBL_CLINC_TBL" FromRole="DOS_TBL" ToRole="CLINC_TBL" />
+          <NavigationProperty Name="MEDLIST_TBL" Relationship="CLINIC_DATABASE.FK_MEDLIST_TBL_DOS_TBL" FromRole="DOS_TBL" ToRole="MEDLIST_TBL" />
+        </EntityType>
+        <Association Name="FK_DOS_TBL_CLINC_TBL">
+          <End Type="CLINIC_DATABASE.CLINC_TBL" Role="CLINC_TBL" Multiplicity="0..1" />
+          <End Type="CLINIC_DATABASE.DOS_TBL" Role="DOS_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLINC_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Principal>
+            <Dependent Role="DOS_TBL">
+              <PropertyRef Name="CLI_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MEDLIST_TBL_DOS_TBL">
+          <End Type="CLINIC_DATABASE.DOS_TBL" Role="DOS_TBL" Multiplicity="0..1" />
+          <End Type="CLINIC_DATABASE.MEDLIST_TBL" Role="MEDLIST_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOS_TBL">
+              <PropertyRef Name="DOS_ID" />
+            </Principal>
+            <Dependent Role="MEDLIST_TBL">
+              <PropertyRef Name="DOS_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CLINIC_DATABASEStoreContainer" CdmEntityContainer="CLINIC_DATABASE_2020Entities">
+    <EntitySetMapping Name="APO_TBL">
+      <EntityTypeMapping TypeName="IsTypeOf(CLINIC_DATABASE.APO_TBL)">
+        <MappingFragment StoreEntitySet="APO_TBL">
+          <ScalarProperty Name="APO_ID" ColumnName="APO_ID" />
+          <ScalarProperty Name="APO_CODE" ColumnName="APO_CODE" />
+          <ScalarProperty Name="APO_DATE" ColumnName="APO_DATE" />
+          <ScalarProperty Name="APO_TIME" ColumnName="APO_TIME" />
+          <ScalarProperty Name="APO_NAME" ColumnName="APO_NAME" />
+          <ScalarProperty Name="APO_NOTE" ColumnName="APO_NOTE" />
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+          <ScalarProperty Name="CUST_ID" ColumnName="CUST_ID" />
+          <ScalarProperty Name="DOC_ID" ColumnName="DOC_ID" />
+          <ScalarProperty Name="VIS_ID" ColumnName="VIS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CARD_TBL">
+      <EntityTypeMapping TypeName="IsTypeOf(CLINIC_DATABASE.CARD_TBL)">
+        <MappingFragment StoreEntitySet="CARD_TBL">
+          <ScalarProperty Name="CARD_ID" ColumnName="CARD_ID" />
+          <ScalarProperty Name="CARD_CODE" ColumnName="CARD_CODE" />
+          <ScalarProperty Name="CARD_NAME" ColumnName="CARD_NAME" />
+          <ScalarProperty Name="CARD_DATE" ColumnName="CARD_DATE" />
+          <ScalarProperty Name="CARD_STATE" ColumnName="CARD_STATE" />
+          <ScalarProperty Name="CARD_PER" ColumnName="CARD_PER" />
+          <ScalarProperty Name="CARD_NOTE" ColumnName="CARD_NOTE" />
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLINC_TBL">
+      <EntityTypeMapping TypeName="IsTypeOf(CLINIC_DATABASE.CLINC_TBL)">
+        <MappingFragment StoreEntitySet="CLINC_TBL">
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+          <ScalarProperty Name="CLI_CODE" ColumnName="CLI_CODE" />
+          <ScalarProperty Name="CLI_NAME" ColumnName="CLI_NAME" />
+          <ScalarProperty Name="CLI_LOC" ColumnName="CLI_LOC" />
+          <ScalarProperty Name="CLI_NOTE" ColumnName="CLI_NOTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPANY_TBL">
+      <EntityTypeMapping TypeName="IsTypeOf(CLINIC_DATABASE.COMPANY_TBL)">
+        <MappingFragment StoreEntitySet="COMPANY_TBL">
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="COM_CODE" ColumnName="COM_CODE" />
+          <ScalarProperty Name="COM_NAME" ColumnName="COM_NAME" />
+          <ScalarProperty Name="COM_ADDRESS" ColumnName="COM_ADDRESS" />
+          <ScalarProperty Name="COM_MOBILE1" ColumnName="COM_MOBILE1" />
+          <ScalarProperty Name="COM_STATE" ColumnName="COM_STATE" />
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUST_TBL">
+      <EntityTypeMapping TypeName="IsTypeOf(CLINIC_DATABASE.CUST_TBL)">
+        <MappingFragment StoreEntitySet="CUST_TBL">
+          <ScalarProperty Name="CUST_ID" ColumnName="CUST_ID" />
+          <ScalarProperty Name="CUST_CODE" ColumnName="CUST_CODE" />
+          <ScalarProperty Name="CUST_F_NAME" ColumnName="CUST_F_NAME" />
+          <ScalarProperty Name="CUST_S_NAME" ColumnName="CUST_S_NAME" />
+          <ScalarProperty Name="CUST_T_NAME" ColumnName="CUST_T_NAME" />
+          <ScalarProperty Name="CUST_L_NAME" ColumnName="CUST_L_NAME" />
+          <ScalarProperty Name="CUST_AGE" ColumnName="CUST_AGE" />
+          <ScalarProperty Name="CUST_BD" ColumnName="CUST_BD" />
+          <ScalarProperty Name="CUST_MOBLIE1" ColumnName="CUST_MOBLIE1" />
+          <ScalarProperty Name="CUST_MOBILE2" ColumnName="CUST_MOBILE2" />
+          <ScalarProperty Name="CUST_ADDRESS" ColumnName="CUST_ADDRESS" />
+          <ScalarProperty Name="CUST_SAVE_STATE" ColumnName="CUST_SAVE_STATE" />
+          <ScalarProperty Name="CARD_ID" ColumnName="CARD_ID" />
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+          <ScalarProperty Name="CUST_NOTE" ColumnName="CUST_NOTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIAGNOIS_TBL">
+      <EntityTypeMapping TypeName="IsTypeOf(CLINIC_DATABASE.DIAGNOIS_TBL)">
+        <MappingFragment StoreEntitySet="DIAGNOIS_TBL">
+          <ScalarProperty Name="DIG_ID" ColumnName="DIG_ID" />
+          <ScalarProperty Name="DIG_CODE" ColumnName="DIG_CODE" />
+          <ScalarProperty Name="DIG_NAME" ColumnName="DIG_NAME" />
+          <ScalarProperty Name="DIG_TYPE" ColumnName="DIG_TYPE" />
+          <ScalarProperty Name="DIG_NOTE" ColumnName="DIG_NOTE" />
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIGLIST_TBL">
+      <EntityTypeMapping TypeName="IsTypeOf(CLINIC_DATABASE.DIGLIST_TBL)">
+        <MappingFragment StoreEntitySet="DIGLIST_TBL">
+          <ScalarProperty Name="DIGLIST_ID" ColumnName="DIGLIST_ID" />
+          <ScalarProperty Name="DIGLIST_CODE" ColumnName="DIGLIST_CODE" />
+          <ScalarProperty Name="DIGLIST_NAME" ColumnName="DIGLIST_NAME" />
+          <ScalarProperty Name="DIGLIST_DATE" ColumnName="DIGLIST_DATE" />
+          <ScalarProperty Name="DIGLIST_TIME" ColumnName="DIGLIST_TIME" />
+          <ScalarProperty Name="DIG_ID" ColumnName="DIG_ID" />
+          <ScalarProperty Name="CUST_ID" ColumnName="CUST_ID" />
+          <ScalarProperty Name="VIS_ID" ColumnName="VIS_ID" />
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOCTORS_TBL">
+      <EntityTypeMapping TypeName="IsTypeOf(CLINIC_DATABASE.DOCTORS_TBL)">
+        <MappingFragment StoreEntitySet="DOCTORS_TBL">
+          <ScalarProperty Name="DOC_ID" ColumnName="DOC_ID" />
+          <ScalarProperty Name="DOC_CODE" ColumnName="DOC_CODE" />
+          <ScalarProperty Name="DOC_NAME" ColumnName="DOC_NAME" />
+          <ScalarProperty Name="DOC_MAJOR" ColumnName="DOC_MAJOR" />
+          <ScalarProperty Name="DOC_EXP" ColumnName="DOC_EXP" />
+          <ScalarProperty Name="DOC_BD" ColumnName="DOC_BD" />
+          <ScalarProperty Name="DOC_MOBILE" ColumnName="DOC_MOBILE" />
+          <ScalarProperty Name="DOC_ADDRESS" ColumnName="DOC_ADDRESS" />
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MEDCHEK_TBL">
+      <EntityTypeMapping TypeName="IsTypeOf(CLINIC_DATABASE.MEDCHEK_TBL)">
+        <MappingFragment StoreEntitySet="MEDCHEK_TBL">
+          <ScalarProperty Name="MEDCHECK_ID" ColumnName="MEDCHECK_ID" />
+          <ScalarProperty Name="MEDCHEK_CODE" ColumnName="MEDCHEK_CODE" />
+          <ScalarProperty Name="MEDCHEK_NAME" ColumnName="MEDCHEK_NAME" />
+          <ScalarProperty Name="MEDCHEK_TYPE" ColumnName="MEDCHEK_TYPE" />
+          <ScalarProperty Name="MEDCHEK_PRICE" ColumnName="MEDCHEK_PRICE" />
+          <ScalarProperty Name="MEDCHEK_NOTE" ColumnName="MEDCHEK_NOTE" />
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MEDCIN_TBL">
+      <EntityTypeMapping TypeName="IsTypeOf(CLINIC_DATABASE.MEDCIN_TBL)">
+        <MappingFragment StoreEntitySet="MEDCIN_TBL">
+          <ScalarProperty Name="MED_ID" ColumnName="MED_ID" />
+          <ScalarProperty Name="MED_CODE" ColumnName="MED_CODE" />
+          <ScalarProperty Name="MED_NAME" ColumnName="MED_NAME" />
+          <ScalarProperty Name="MED_S_NAME" ColumnName="MED_S_NAME" />
+          <ScalarProperty Name="MED_SOURSE" ColumnName="MED_SOURSE" />
+          <ScalarProperty Name="MED_PRICE" ColumnName="MED_PRICE" />
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MEDLIST_TBL">
+      <EntityTypeMapping TypeName="IsTypeOf(CLINIC_DATABASE.MEDLIST_TBL)">
+        <MappingFragment StoreEntitySet="MEDLIST_TBL">
+          <ScalarProperty Name="MEDLIST_ID" ColumnName="MEDLIST_ID" />
+          <ScalarProperty Name="MEDLIST_CODE" ColumnName="MEDLIST_CODE" />
+          <ScalarProperty Name="MEDLIST_NAME" ColumnName="MEDLIST_NAME" />
+          <ScalarProperty Name="MEDLIST_DATE" ColumnName="MEDLIST_DATE" />
+          <ScalarProperty Name="MEDLIST_TIME" ColumnName="MEDLIST_TIME" />
+          <ScalarProperty Name="MED_ID" ColumnName="MED_ID" />
+          <ScalarProperty Name="DOS_ID" ColumnName="DOS_ID" />
+          <ScalarProperty Name="CUST_ID" ColumnName="CUST_ID" />
+          <ScalarProperty Name="VIS_ID" ColumnName="VIS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MEDREQ_TBL">
+      <EntityTypeMapping TypeName="IsTypeOf(CLINIC_DATABASE.MEDREQ_TBL)">
+        <MappingFragment StoreEntitySet="MEDREQ_TBL">
+          <ScalarProperty Name="MEDREQ_ID" ColumnName="MEDREQ_ID" />
+          <ScalarProperty Name="MEDREQ_CODE" ColumnName="MEDREQ_CODE" />
+          <ScalarProperty Name="MEDREQ_NAME" ColumnName="MEDREQ_NAME" />
+          <ScalarProperty Name="MEDREQ_DATE" ColumnName="MEDREQ_DATE" />
+          <ScalarProperty Name="MEDREQ_TIME" ColumnName="MEDREQ_TIME" />
+          <ScalarProperty Name="MEDREQ_RESULT" ColumnName="MEDREQ_RESULT" />
+          <ScalarProperty Name="MEDREQ_NOTE" ColumnName="MEDREQ_NOTE" />
+          <ScalarProperty Name="MEDCHECK_ID" ColumnName="MEDCHECK_ID" />
+          <ScalarProperty Name="CUST_ID" ColumnName="CUST_ID" />
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+          <ScalarProperty Name="VIS_ID" ColumnName="VIS_ID" />
+          <ScalarProperty Name="MEDREQ_STATE" ColumnName="MEDREQ_STATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERLIST_TBL">
+      <EntityTypeMapping TypeName="IsTypeOf(CLINIC_DATABASE.SERLIST_TBL)">
+        <MappingFragment StoreEntitySet="SERLIST_TBL">
+          <ScalarProperty Name="SERLIST_ID" ColumnName="SERLIST_ID" />
+          <ScalarProperty Name="SERLIST_CODE" ColumnName="SERLIST_CODE" />
+          <ScalarProperty Name="SERLIST_NAME" ColumnName="SERLIST_NAME" />
+          <ScalarProperty Name="SERLIST_DATE" ColumnName="SERLIST_DATE" />
+          <ScalarProperty Name="SERLIST_TIME" ColumnName="SERLIST_TIME" />
+          <ScalarProperty Name="SER_PRICE_TOTAL" ColumnName="SER_PRICE_TOTAL" />
+          <ScalarProperty Name="SERLIST_NOTE" ColumnName="SERLIST_NOTE" />
+          <ScalarProperty Name="SER_ID" ColumnName="SER_ID" />
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+          <ScalarProperty Name="CUST_ID" ColumnName="CUST_ID" />
+          <ScalarProperty Name="VIS_ID" ColumnName="VIS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVICE_TBL">
+      <EntityTypeMapping TypeName="IsTypeOf(CLINIC_DATABASE.SERVICE_TBL)">
+        <MappingFragment StoreEntitySet="SERVICE_TBL">
+          <ScalarProperty Name="SER_ID" ColumnName="SER_ID" />
+          <ScalarProperty Name="SER_CODE" ColumnName="SER_CODE" />
+          <ScalarProperty Name="SER_NAME" ColumnName="SER_NAME" />
+          <ScalarProperty Name="SER_TYPE" ColumnName="SER_TYPE" />
+          <ScalarProperty Name="SER_PRICE" ColumnName="SER_PRICE" />
+          <ScalarProperty Name="SER_NOTE" ColumnName="SER_NOTE" />
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERS_TBL">
+      <EntityTypeMapping TypeName="IsTypeOf(CLINIC_DATABASE.USERS_TBL)">
+        <MappingFragment StoreEntitySet="USERS_TBL">
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_CODE" ColumnName="USER_CODE" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="USER_PASSWORD" ColumnName="USER_PASSWORD" />
+          <ScalarProperty Name="USER_TYPE" ColumnName="USER_TYPE" />
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VISIT_TBL">
+      <EntityTypeMapping TypeName="IsTypeOf(CLINIC_DATABASE.VISIT_TBL)">
+        <MappingFragment StoreEntitySet="VISIT_TBL">
+          <ScalarProperty Name="VIS_ID" ColumnName="VIS_ID" />
+          <ScalarProperty Name="VIS_CODE" ColumnName="VIS_CODE" />
+          <ScalarProperty Name="VIS_NAME" ColumnName="VIS_NAME" />
+          <ScalarProperty Name="VIS_DATE" ColumnName="VIS_DATE" />
+          <ScalarProperty Name="VIS_TIME" ColumnName="VIS_TIME" />
+          <ScalarProperty Name="VIS_TYPE" ColumnName="VIS_TYPE" />
+          <ScalarProperty Name="CUST_ID" ColumnName="CUST_ID" />
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+          <ScalarProperty Name="DOC_ID" ColumnName="DOC_ID" />
+          <ScalarProperty Name="VIS_PRICE" ColumnName="VIS_PRICE" />
+          <ScalarProperty Name="VIS_DIS_COUNT" ColumnName="VIS_DIS_COUNT" />
+          <ScalarProperty Name="VIS_TOTAL" ColumnName="VIS_TOTAL" />
+          <ScalarProperty Name="VIS_NOTE" ColumnName="VIS_NOTE" />
+          <ScalarProperty Name="VIS_PAY_TYPE" ColumnName="VIS_PAY_TYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDER_TBL">
+      <EntityTypeMapping TypeName="IsTypeOf(CLINIC_DATABASE.ORDER_TBL)">
+        <MappingFragment StoreEntitySet="ORDER_TBL">
+          <ScalarProperty Name="ORDER_ID" ColumnName="ORDER_ID" />
+          <ScalarProperty Name="ORDER_CODE" ColumnName="ORDER_CODE" />
+          <ScalarProperty Name="ORDER_DATE" ColumnName="ORDER_DATE" />
+          <ScalarProperty Name="ORDER_TIME" ColumnName="ORDER_TIME" />
+          <ScalarProperty Name="ORDER_NOTE" ColumnName="ORDER_NOTE" />
+          <ScalarProperty Name="CUST_ID" ColumnName="CUST_ID" />
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOS_TBL">
+      <EntityTypeMapping TypeName="IsTypeOf(CLINIC_DATABASE.DOS_TBL)">
+        <MappingFragment StoreEntitySet="DOS_TBL">
+          <ScalarProperty Name="DOS_ID" ColumnName="DOS_ID" />
+          <ScalarProperty Name="DOS_CODE" ColumnName="DOS_CODE" />
+          <ScalarProperty Name="DOS_NAME" ColumnName="DOS_NAME" />
+          <ScalarProperty Name="DOS_TYPE" ColumnName="DOS_TYPE" />
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

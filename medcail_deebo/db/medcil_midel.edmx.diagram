@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bf937d25b5834b9f9606a399c8c661ce" Name="Diagram1" ZoomLevel="10">
+        <EntityTypeShape EntityType="CLINIC_DATABASE.APO_TBL" Width="1.5" PointX="6" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINIC_DATABASE.CARD_TBL" Width="1.5" PointX="5.25" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINIC_DATABASE.CLINC_TBL" Width="1.5" PointX="0.75" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINIC_DATABASE.COMPANY_TBL" Width="1.5" PointX="3" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINIC_DATABASE.CUST_TBL" Width="1.5" PointX="8.5" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINIC_DATABASE.DIAGNOIS_TBL" Width="1.5" PointX="3" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINIC_DATABASE.DIGLIST_TBL" Width="1.5" PointX="13" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINIC_DATABASE.DOCTORS_TBL" Width="1.5" PointX="3" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINIC_DATABASE.MEDCHEK_TBL" Width="1.5" PointX="3" PointY="34" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINIC_DATABASE.MEDCIN_TBL" Width="1.5" PointX="3" PointY="37.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINIC_DATABASE.MEDLIST_TBL" Width="1.5" PointX="10.75" PointY="29" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINIC_DATABASE.MEDREQ_TBL" Width="1.5" PointX="5.25" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINIC_DATABASE.SERLIST_TBL" Width="1.5" PointX="5.25" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINIC_DATABASE.SERVICE_TBL" Width="1.5" PointX="3" PointY="45.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINIC_DATABASE.USERS_TBL" Width="1.5" PointX="3" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINIC_DATABASE.VISIT_TBL" Width="1.5" PointX="10.75" PointY="23.375" IsExpanded="true" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_APO_TBL_CLINC_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_APO_TBL_CUST_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_CARD_TBL_CLINC_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_CARD_TBL_COMPANY_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_CUST_TBL_CARD_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_COMPANY_TBL_CLINC_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_CUST_TBL_CLINC_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_DIAGNOIS_TBL_CLINC_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_DIGLIST_TBL_CLINC_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_DOCTORS_TBL_CLINC_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_MEDCHEK_TBL_CLINC_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_MEDCIN_TBL_CLINC_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_MEDREQ_TBL_CLINC_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_SERLIST_TBL_CLINC_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_SERVICE_TBL_CLINC_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_USERS_TBL_CLINC_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_VISIT_TBL_CLINC_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_MEDLIST_TBL_CUST_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_VISIT_TBL_CUST_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_DIGLIST_TBL_DIAGNOIS_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_DIGLIST_TBL_VISIT_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_VISIT_TBL_DOCTORS_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_MEDREQ_TBL_MEDCHEK_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_MEDLIST_TBL_MEDCIN_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_SERLIST_TBL_SERLIST_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_APO_BDOCTORS_TBL" />
+        <EntityTypeShape EntityType="CLINIC_DATABASE.ORDER_TBL" Width="1.5" PointX="0.75" PointY="0.75" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_ORDER_TBL_ToTable" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_ORDER_TBL_CUST_TBL" />
+        <EntityTypeShape EntityType="CLINIC_DATABASE.DOS_TBL" Width="1.5" PointX="3" PointY="42" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_DOS_TBL_CLINC_TBL" />
+        <AssociationConnector Association="CLINIC_DATABASE.FK_MEDLIST_TBL_DOS_TBL" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
